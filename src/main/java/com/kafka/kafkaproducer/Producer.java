@@ -1,12 +1,8 @@
-package com.kafkaproducer;
+package com.kafka.kafkaproducer;
 
 import com.model.Athletics;
-import com.serializer.AthleticsSerializer;
 import org.apache.kafka.clients.producer.*;
-import org.apache.kafka.common.serialization.ByteArraySerializer;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class Producer {
@@ -22,12 +18,11 @@ public class Producer {
         KafkaProducer producer= new KafkaProducer(properties);
         //Creating a Athletics object passing it into the producer record
         //Storing value in ProducerRecord's object
-        Athletics athletics= new Athletics("vikram","200m","20");
+        Athletics athletics= new Athletics("kavin","100m","22");
         ProducerRecord<String,Athletics> record= new ProducerRecord<>("sb", athletics );
 
         try {
-            //sending the record to the server
-            //record holds the Athletics object
+
             producer.send(record);
             producer.close();
         }catch(Exception e){

@@ -1,4 +1,4 @@
-package com.deserializer;
+package com.kafka.deserializer;
 
 import com.model.Athletics;
 import org.apache.kafka.common.errors.SerializationException;

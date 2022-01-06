@@ -1,4 +1,4 @@
-package com.kafkaconsumer;
+package com.kafka.kafkaconsumer;
 
 import com.model.Athletics;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -19,7 +19,7 @@ public class Consumer {
         //we created the AthleticsDeserializer class that implements the Deserializer interface
         //to deserialize the object value
         properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"com.deserializer.AthleticsDeserializer");
-        properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG,"language_");
+        properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG,"1language_");
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest");
 
         //crating kafka consumer object

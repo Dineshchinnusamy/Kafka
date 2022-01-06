@@ -1,4 +1,4 @@
-package com.serializer;
+package com.kafka.serializer;
 
 import com.model.Athletics;
 import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
